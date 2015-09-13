@@ -14,6 +14,7 @@ public class TransactionEventTest {
         try {
             Event t = EventUtils.parse(testIncoming);
             Assert.assertEquals("transaction.created", t.getType());
+            Assert.assertEquals(t.getMessage(), "Spent 3.50GBP at Ozone Coffee Roasters");
         } catch (Exception e) {
             // TODO Auto-generated catch block
             fail("Failed " + e.getMessage());
